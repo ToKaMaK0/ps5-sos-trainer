@@ -3,7 +3,7 @@
 [Download the ready-to-use JSON](https://raw.githubusercontent.com/ToKaMaK0/ps5-sos-trainer/main/cheats/json/PPSA28997_01.008.001.json)
 
 For **God of War Sons of Sparta, PPSA28997, 01.008.001 (tested BP 4.xx build)**.
-Live-tested on PS5 FW 11.60 using **PS5Upload 7.1.9**. The player confirmed all four effects on 2026-10-20.
+Live-tested on PS5 FW 11.60 using **PS5Upload 7.1.9**. The player confirmed combat, jump, currencies and direct refills of all five crafting materials on 2026-10-20. The final material JSON hook was then exercised in the live game by calling the ordinary wallet quantity getter; all five resulting real wallet quantities were independently read back as 1,000.
 
 | Switch | Effect |
 |---|---|
@@ -11,6 +11,21 @@ Live-tested on PS5 FW 11.60 using **PS5Upload 7.1.9**. The player confirmed all 
 | Player damage x6 | Multiplies player attacks against enemies; restores shared damage data after the call |
 | High jump x4 height | Doubles upward player jump impulse; approximate height x4 |
 | Coins and red orbs: minimum 100000 on pickup | A positive pickup brings that currency to at least 100,000; pick up a coin or red orb after enabling |
+| Five crafting materials: minimum 1000 when checked | Tops up the actual wallet when inventory/crafting code checks a permitted material; open inventory or an upgrade menu after enabling. No pickup is required |
+
+## Five crafting materials
+
+| English name | Русское название | Internal item ID | Localization key |
+|---|---|---|---|
+| Rusty Fragment | Ржавый обломок | `loot_common_spear` | `7390` |
+| Raw Ore | Необработанная руда | `loot_common_shield` | `7392` |
+| Shiny Metal | Блестящий металл | `loot_rare_spear` | `7402` |
+| Ionian Salt | Ионийская соль | `loot_epic_spear_tail` | `7420` |
+| Cretan Whetstone | Критский точильный камень | `loot_epic_spear_tip` | `7414` |
+
+Names were matched against the running game's Russian localization table and item definitions. The switch tops up only these five materials, only when their valid quantity is below 1,000. Larger or invalid negative quantities are unchanged. Enabling it does not enumerate or unlock the full inventory; a material must be queried by inventory/crafting code. Reopen inventory or an upgrade menu to trigger those normal checks. Save normally to retain actual wallet quantities; disabling the switch does not remove materials already saved.
+
+The getter hook runs the original quantity lookup, then calls only the game's dictionary mutation core for a missing amount, and reads back the result. It does not call the pickup notification delegate, equipment, skill, collectible or story-unlock APIs. Other items and currencies pass through unchanged. The old two-material pickup-only prototype is replaced by this five-material quantity-check implementation; the currencies still require a positive pickup.
 
 ## Install and activate
 
@@ -27,7 +42,7 @@ This file requires a reader that implements the per-mod `module_name` field and 
 
 No quest, equipment, skill or collectible unlock functions are patched. High jump can bypass level gates. Currency changes may persist in saves and have not been audited against every achievement or quest condition. Keep your own save backup.
 
-The PC executable is not required for these JSON effects. Enabling and exact installed bytes were verified through PS5Upload and independent memory readback. The player confirmed combat, jump and currency behavior. Console-native checks cover 126 combat/jump cases at two module origins plus 2,912 wallet cases, including the full 180-item catalogue, negative/pass-through amounts and SysV argument/register/stack preservation. The native code was tested with **execute-only** code pages; it does not read or write configuration in text pages.
+The PC executable is not required for these JSON effects. Enabling and exact installed bytes were verified through PS5Upload and independent memory readback. The player confirmed combat, jump and currency behavior. Console-native checks cover 126 combat/jump cases at two module origins plus 2,912 wallet cases, including the full 180-item catalogue, negative/pass-through amounts and SysV argument/register/stack preservation. The final five-material getter passed another 5,180 cases (on/off, two origins, the full catalogue and invalid definitions), and 2,912 wallet cases were rerun with the five-material getter enabled. Direct dictionary-only awards of the two previously absent materials passed 450 one-shot/guard/ABI scenarios and were confirmed by the player; those temporary awards are not needed to run the JSON. The native code was tested with **execute-only** code pages; it does not read or write configuration in text pages.
 
 ## Source, attribution and license
 
@@ -479,5 +494,77 @@ jmp 9233467
 ```
 
 Label offsets: `{"money_entry":0}`.
+
+</details>
+
+<details>
+<summary>five materials: assembly origin 0x47A2600, 242 bytes</summary>
+
+The original getter's first 10 bytes contain no RIP-relative instruction and are replayed by the trampoline. Its dictionary body and epilogue remain in the game. The currency option's identity check is at getter +0x10, outside the 10-byte entry hook, so both switches can be used independently. The material option additionally validates the dictionary-core entry. Compile this block directly at the listed virtual module offset; it has no label-table relocation or embedded heap addresses.
+
+```asm
+material_entry:
+test rdi,rdi
+jz getter_original
+test rsi,rsi
+jz getter_original
+cmp qword ptr [rsi+16],0
+je getter_original
+cmp dword ptr [rsi+0x48],1
+jne getter_original
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+mov rax,qword ptr [rsi+24]
+test rax,rax
+jz getter_original
+cmp dword ptr [rax+16],4
+jne getter_original
+mov r10,0x30003900330037
+cmp qword ptr [rax+20],r10
+je material_match
+mov r10,0x32003900330037
+cmp qword ptr [rax+20],r10
+je material_match
+mov r10,0x32003000340037
+cmp qword ptr [rax+20],r10
+je material_match
+mov r10,0x30003200340037
+cmp qword ptr [rax+20],r10
+je material_match
+mov r10,0x34003100340037
+cmp qword ptr [rax+20],r10
+je material_match
+jmp getter_original
+material_match:
+push rbx
+push r12
+push r13
+mov rbx,rdi
+mov r12,rsi
+mov r13,rdx
+call getter_original
+test rax,rax
+js material_done
+cmp rax,1000
+jge material_done
+mov edx,1000
+sub rdx,rax
+mov rdi,rbx
+mov rsi,r12
+xor ecx,ecx
+call 9232624
+mov rdi,rbx
+mov rsi,r12
+mov rdx,r13
+call getter_original
+material_done:
+pop r13
+pop r12
+pop rbx
+ret
+getter_original:
+.byte 85,72,137,229,65,87,65,86,83,80
+jmp 9233082
+```
 
 </details>
