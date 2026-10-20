@@ -1,0 +1,49 @@
+{
+  "Size": 1024,
+  "Offsets": {
+    "health_entry": 80,
+    "grey_entry": 138,
+    "spirit_entry": 197,
+    "mana_filter": 572,
+    "damage_filter": 660,
+    "control": 944,
+    "on_player": 255,
+    "health_filter": 319,
+    "grey_filter": 411,
+    "spirit_filter": 503
+  },
+  "Sites": [
+    {
+      "Name": "health",
+      "Address": "0x80F4B550",
+      "Original": "554889E5535031C0807F2C01",
+      "Length": 12
+    },
+    {
+      "Name": "grey",
+      "Address": "0x80F4BAF0",
+      "Original": "554889E541574156534883EC28",
+      "Length": 13
+    },
+    {
+      "Name": "spirit",
+      "Address": "0x80F420B0",
+      "Original": "554889E54157415641554154",
+      "Length": 12
+    },
+    {
+      "Name": "mana",
+      "Address": "0x80F35A0F",
+      "Original": "C5FA584328C5FA104B2CC5E857D2C5F25DC8C5FAC2C201C5F855C1",
+      "Length": 27
+    },
+    {
+      "Name": "damage",
+      "Address": "0x80F31E1F",
+      "Original": "488B78104885FF7414488B07488B7330488B9080010000FF9078010000",
+      "Length": 29
+    }
+  ],
+  "DamageMultiplier": 6,
+  "ModuleBase": "0x801A0000"
+}

@@ -1,0 +1,18 @@
+{
+  "Size": 264,
+  "Offsets": {
+    "jump_filter": 16,
+    "control": 224
+  },
+  "Sites": [
+    {
+      "Name": "jump",
+      "Address": "0x8089C9C7",
+      "Original": "C5FA10839C0000004C8B73584889DFE805E3FFFF",
+      "Length": 20
+    }
+  ],
+  "DamageMultiplier": 0,
+  "ModuleBase": "0x801A0000",
+  "HeightMultiplier": 4
+}
