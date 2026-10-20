@@ -2,7 +2,7 @@
 
 ## Ready-to-use console JSON
 
-The [Sons of Sparta JSON](cheats/json/PPSA28997_01.008.001.json) is now available separately from the Windows trainer. It was live-tested through PS5Upload 7.1.9 on FW 11.60; the player confirmed health/spirit/magic, damage x6, high jump and the currency pickup top-up.
+The [Sons of Sparta JSON](cheats/json/PPSA28997_01.008.001.json) includes five switches: health/spirit/magic, damage x6, high jump, currency pickup top-up, and five crafting materials topped up to at least 1,000 on an ordinary quantity check (open inventory or an upgrade menu; no pickup needed). The materials are **Rusty Fragment, Raw Ore, Shiny Metal, Ionian Salt and Cretan Whetstone**. Combat, jump, currencies and direct material refills were confirmed by the player on PS5Upload 7.1.9 / FW 11.60; the final JSON getter was also exercised in the live game and all five wallet quantities were independently verified.
 
 See [installation, exact compatibility, validation and console assembly source](cheats/README.md). CheatRunner runtime and a subsequent full relaunch with the final JSON remain unverified. Use a reader that supports `module_name`; the offsets target the Il2Cpp module, not eboot.bin.
 
