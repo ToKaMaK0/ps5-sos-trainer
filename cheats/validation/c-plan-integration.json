@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "actualCPlanToggles": 336,
+  "writes": 960,
+  "checks": [
+    "14 switches, randomized activation/deactivation orders",
+    "Every resource flag independent after every operation",
+    "Shared getter entry kept until the last resource is off",
+    "Last deactivation restores all original bytes",
+    "No write outside declared JSON locations"
+  ]
+}

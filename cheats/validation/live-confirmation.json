@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-22",
+  "game": "PPSA28997",
+  "version": "01.008.001",
+  "firmware": "11.60",
+  "engine": "Locally modified PS5Upload 7.1.11",
+  "native_readback": {
+    "complete_passes": 2,
+    "transitions_per_pass": 28,
+    "final_state": "all off; original code restored"
+  },
+  "player_report": "After saving, closing the game completely, relaunching and checking the new set, the player reported that it works.",
+  "relaunch_evidence": "Player report; no post-relaunch PID/memory capture was taken.",
+  "limitation": "One helper SIGSEGV occurred before the two successful passes; its cause was not established. No claim is made that this JSON fixes every third-party report."
+}
