@@ -2,12 +2,12 @@
 
 ## Console JSON with individual resource switches
 
-The current [console package](cheats/README.md) separates all eleven resources and retains health/spirit/magic, damage x6 and high jump. **Corinthian Leather and Strong Plate are included.**
+The current [console package](cheats/README.md) separates all 23 resources and retains health/spirit/magic, damage x6 and high jump. **Includes the 12 new purchase materials confirmed by the player on 2026-10-22.**
 
-- [14-switch PS5Upload JSON](cheats/json/PPSA28997_01.008.001.json): live-tested with the locally modified helper; all choices start off for each new game process.
+- [26-switch PS5Upload JSON](cheats/json/PPSA28997_01.008.001.json): live-tested with the locally modified helper; all choices start off for each new game process.
 - [Mastercode package for CheatRunner](cheats/cheatrunner/PPSA28997_01.008.001.json): shared resource code plus individual flags. Host conflict and patch checks passed; live CheatRunner testing remains pending.
 
-Read the [exact reader/build requirements and activation instructions](cheats/README.md) before choosing a file. The packages differ intentionally; the shared 14-switch layout must not be distributed as stock-CheatRunner compatible. HEN inclusion of the previous five-switch package does not mean this update has already been accepted.
+Read the [exact reader/build requirements and activation instructions](cheats/README.md) before choosing a file. The packages differ intentionally; the shared 26-switch layout must not be distributed as stock-CheatRunner compatible. HEN inclusion of the previous five-switch package does not mean this update has already been accepted.
 
 Experimental Windows trainer for **God of War Sons of Sparta, PPSA28997 01.008.001**. Tested locally with ps5debug-NG 1.3.2 and PS5 FW 11.60.
 
