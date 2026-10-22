@@ -1,9 +1,9 @@
 {
   "result": "PASS",
-  "cheatrunner_conflict_pairs_before": 55,
+  "cheatrunner_conflict_pairs_before": 253,
   "cheatrunner_conflict_pairs_after": 0,
-  "resource_selections_with_identical_live_tested_code": 2047,
-  "native_c_plan_transitions": 600,
-  "native_c_plan_writes": 1600,
-  "runtime_limit": "CheatRunner-specific 15-mod packaging has not been tested live on a PS5; PS5Upload 14-mod packaging was tested live."
+  "resource_selections_with_identical_code": 1073,
+  "native_c_plan_transitions": 1080,
+  "native_c_plan_writes": 2560,
+  "runtime_limit": "CheatRunner-specific 27-mod packaging has not been tested live on a PS5. Separate live validation report applies to PS5Upload 26-mod packaging."
 }

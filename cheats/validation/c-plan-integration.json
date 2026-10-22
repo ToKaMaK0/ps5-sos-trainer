@@ -1,9 +1,9 @@
 {
   "result": "PASS",
-  "actualCPlanToggles": 336,
-  "writes": 960,
+  "actualCPlanToggles": 624,
+  "writes": 1536,
   "checks": [
-    "14 switches, randomized activation/deactivation orders",
+    "26 switches, randomized activation/deactivation orders",
     "Every resource flag independent after every operation",
     "Shared getter entry kept until the last resource is off",
     "Last deactivation restores all original bytes",

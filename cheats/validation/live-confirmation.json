@@ -2,14 +2,20 @@
   "date": "2026-10-22",
   "game": "PPSA28997",
   "version": "01.008.001",
+  "tested_build": "BP 4.xx",
   "firmware": "11.60",
   "engine": "Locally modified PS5Upload 7.1.11",
+  "resource_switches": 23,
+  "total_switches": 26,
   "native_readback": {
-    "complete_passes": 2,
-    "transitions_per_pass": 28,
-    "final_state": "all off; original code restored"
+    "resource_transitions": 46,
+    "every_flag_checked_after_each_transition": true,
+    "shared_hook_retention_checked": true,
+    "final_state": "all off; original bytes restored"
   },
-  "player_report": "After saving, closing the game completely, relaunching and checking the new set, the player reported that it works.",
-  "relaunch_evidence": "Player report; no post-relaunch PID/memory capture was taken.",
-  "limitation": "One helper SIGSEGV occurred before the two successful passes; its cause was not established. No claim is made that this JSON fixes every third-party report."
+  "player_report": "The player confirmed that all newly requested resources appeared and worked in the game.",
+  "quantity_evidence": "Player report, not a new independent capture of all wallet balances.",
+  "new_package_full_game_relaunch_test": "Not performed. The earlier 14-switch package had a player-reported relaunch confirmation; that does not validate this expanded package.",
+  "initial_attempt": "Shared-hook retention failed in the first live attempt. All options were disabled, the serving helper was gracefully stopped, and the stored modified helper was relaunched. The subsequent complete 46-transition pass succeeded. The identity of the earlier serving build was not independently established.",
+  "cheatrunner_live_tested": false
 }

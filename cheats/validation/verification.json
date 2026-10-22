@@ -1,14 +1,14 @@
 {
   "result": "PASS",
-  "scenarios": 8876,
+  "scenarios": 21924,
   "checks": [
-    "All catalog items, eleven independent flags; all/single/leave-one-out/alternating selections",
+    "All catalog items, 23 independent flags; all/single/leave-one-out/alternating selections",
     "Null/destroyed/invalid definitions",
     "Off/on and two relocated image origins",
     "Execute-only module pages",
     "Real getter prologue and epilogue; tail and nested trampoline calls",
     "Negative and high balances unchanged",
-    "Dictionary core called only for permitted material below 1000",
+    "Dictionary core called only for permitted material below the resource minimum",
     "Stack ABI and all callee-saved registers; no text reads or writes"
   ]
 }
