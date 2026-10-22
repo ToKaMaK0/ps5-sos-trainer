@@ -1,0 +1,101 @@
+{
+  "cave": 75113984,
+  "size": 813,
+  "table": 96,
+  "entry": 75114080,
+  "site": 9233072,
+  "core": 9232624,
+  "original": "554889e5415741565350",
+  "flags": [
+    186,
+    238,
+    290,
+    342,
+    394,
+    446,
+    498,
+    550,
+    602,
+    651,
+    696
+  ],
+  "targets": [
+    {
+      "id": "loot_currency",
+      "key": "7388",
+      "ru": "Монеты",
+      "limit": 100000,
+      "category": 2
+    },
+    {
+      "id": "loot_orb_red",
+      "key": "7386",
+      "ru": "Красные сферы",
+      "limit": 100000,
+      "category": 1
+    },
+    {
+      "id": "loot_common_spear",
+      "key": "7390",
+      "ru": "Ржавый обломок",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_common_shield",
+      "key": "7392",
+      "ru": "Необработанная руда",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_rare_spear",
+      "key": "7402",
+      "ru": "Блестящий металл",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_rare_shield",
+      "key": "7404",
+      "ru": "Прочная пластина",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_epic_spear_tip",
+      "key": "7414",
+      "ru": "Критский точильный камень",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_epic_spear_tip_status",
+      "key": "7416",
+      "ru": "Эгейский кристалл",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_epic_spear_grip",
+      "key": "7418",
+      "ru": "Коринфская кожа",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_epic_spear_tail",
+      "key": "7420",
+      "ru": "Ионийская соль",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_epic_shield",
+      "key": "7422",
+      "ru": "Сплав из Элизия",
+      "limit": 1000,
+      "category": 1
+    }
+  ]
+}
