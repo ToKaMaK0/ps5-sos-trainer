@@ -1,21 +1,19 @@
-# Sons of Sparta: individual resource switches
+# Sons of Sparta: 23 individual resource switches
 
-Game: **PPSA28997, 01.008.001, tested BP 4.xx build**, PS5 FW 11.60.
+Updated 2026-10-22. **PPSA28997, 01.008.001, tested BP 4.xx build / PS5 FW 11.60.**
 
 ## Choose the file for your reader
 
-| File | Reader and status |
+| File | Reader and validation |
 |---|---|
-| [14-switch PS5Upload JSON](json/PPSA28997_01.008.001.json) | Same file tested on the player's console. Requires the [local helper changes](../integrations/ps5upload/README.md) for independent shared-hook removal and session-only checkbox state. Do not import into stock CheatRunner. |
-| [15-switch mastercode JSON](cheatrunner/PPSA28997_01.008.001.json) | Prepared for CheatRunner 0.18/current named-module mastercode readers. Includes one shared resource mastercode plus the same 14 effects. Real CheatRunner conflict analysis and host patch tests pass; **live CheatRunner execution remains unverified**. Can also be used with a named-module PS5Upload reader if the mastercode is explicitly enabled first. |
+| [26-switch PS5Upload JSON](json/PPSA28997_01.008.001.json) | Tested on the player's PS5 with the [modified helper](../integrations/ps5upload/README.md). Requires shared-hook retention and session-only checkbox state. Do not distribute this shared layout as stock-CheatRunner compatible. |
+| [27-entry CheatRunner mastercode JSON](cheatrunner/PPSA28997_01.008.001.json) | One Resource mastercode, 23 independent resource flags and the same three combat/movement options. Prepared for CheatRunner 0.18/current named-module mastercode readers. Host checks pass; **live CheatRunner execution remains unverified**. |
 
-Both files default to unchecked metadata. Existing reader state/autoload profiles are separate: disable or clear profiles for the previous file before replacing it. Only the modified PS5Upload helper implements the tested game-PID reset. Do not treat JSON metadata as a guarantee that every reader clears saved choices.
+Both files default to unchecked metadata. Clear previous reader/autoload choices before replacing a file: only the modified PS5Upload helper implements the tested game-PID reset. JSON metadata alone cannot clear another reader's saved choices. The Windows SoS-Trainer.exe is a separate, unchanged application; its feature list was not expanded by this JSON update.
 
 ## Effects
 
-Three combat/movement options are unchanged: player-only infinite health/spirit/magic; player damage x6; high jump (upward impulse x2, approximately x4 height).
-
-Each resource below has its **own** switch:
+The three existing options remain: player-only infinite health/spirit/magic, player damage x6, and high jump (upward impulse x2, approximately x4 height). Each resource has its own switch:
 
 | Resource / ресурс | Internal ID | Minimum |
 |---|---|---|
@@ -30,31 +28,45 @@ Each resource below has its **own** switch:
 | Коринфская кожа | `loot_epic_spear_grip` | 1000 |
 | Ионийская соль | `loot_epic_spear_tail` | 1000 |
 | Сплав из Элизия | `loot_epic_shield` | 1000 |
+| Крыло странствий | `loot_common_wing` | 1000 |
+| Коготь страха | `loot_common_fang` | 1000 |
+| Морская раковина | `loot_common_shell` | 1000 |
+| Птичьи перья | `loot_rare_feather` | 1000 |
+| Кончик хвоста | `loot_rare_tail` | 1000 |
+| Клочок меха | `loot_rare_fur` | 1000 |
+| Слеза камня | `loot_epic_gorgon` | 1000 |
+| Шерсть льва | `loot_mythic_lost_boy` | 1000 |
+| Глаз циклопа | `loot_boss_cyclops` | 1000 |
+| Золотой клык | `loot_mythic_boar_jr` | 1000 |
+| Белокурые волосы | `loot_epic_siren` | 1000 |
+| Змеиная шкура | `loot_mythic_ladon` | 1000 |
 
-Reopen inventory or an upgrade menu after enabling a resource. The normal quantity getter tops up the actual wallet; no new pickup is required, including currencies. Negative and already-higher quantities pass through. Disabling stops top-ups and does not remove quantities already awarded. Save normally to retain awarded quantities.
+The 12 new resources are Крыло странствий, Коготь страха, Морская раковина, Птичьи перья, Кончик хвоста, Клочок меха, Слеза камня, Шерсть льва, Глаз циклопа, Золотой клык, Белокурые волосы and Змеиная шкура. Their names were matched to the running game's Russian localization and item definitions.
 
-No equipment, skill, collectible, or quest unlock commands are included. The resource code calls the dictionary mutation core, not pickup/story notification delegates. High jump can bypass level gates. This is not an audit of every achievement or progression condition.
+Reopen inventory or a purchase/upgrade menu after enabling a resource. Its normal quantity getter tops up the actual wallet; no new pickup is required. Negative and already-higher balances pass through. Disabling stops top-ups and does not remove awarded quantities. Save normally to retain them.
 
-## Install
+The code does not call equipment, skill, collectible or quest unlock APIs or pickup notification delegates. Golden Fang's localization key is also used by collectible definitions; storage and category checks distinguish the intended resource. The catalog check proves the target key/storage/category combination is unique in the inspected build. This is not an audit of every quest/achievement condition: the game can itself react to possession of an item. High jump can bypass level gates.
 
-1. Use the exact supported game/build. Completely close the game and disable the other trainer/engine before changing packages. Clear old autoload profiles: mod indices have changed.
-2. For the tested 14-switch package, install the modified helper and import `json/PPSA28997_01.008.001.json` into PS5Upload with cheats off. It belongs in `/data/ps5upload/cheats/json/`.
-3. For CheatRunner, use only `cheatrunner/PPSA28997_01.008.001.json` in `/data/cheatrunner/cheats/json/`. Do not also leave another cheat file for this same game/version selected. Use a reader supporting per-mod `module_name` and mastercodes.
-4. Load the game. In the 15-switch package, enable **Resource mastercode** first, then any resource options. CheatRunner may auto-enable it; if a reader's cooldown rejects the following dependent toggle, wait for that cooldown and toggle the resource again. Explicitly enabling the mastercode first avoids that interaction. Turn individual resources off before turning the mastercode off. Combat/jump do not need the resource mastercode.
-5. In the tested PS5Upload package, the new game process begins with all choices off. Returning to the game's main menu is not a process restart. Restarting only the helper clears its choices but does not undo memory patches in an already-running game; disable cheats first.
+## Install and activate
 
-## Compatibility and validation
+1. Use the exact supported build. Disable cheats and fully close the game before replacing a different cheat package. Use one cheat engine at a time and clear old autoload profiles.
+2. For the tested PS5Upload layout, import `json/PPSA28997_01.008.001.json` with the engine off into `/data/ps5upload/cheats/json/`. Run the modified helper. A helper reporting the same official version number is insufficient proof that the modifications are loaded.
+3. For CheatRunner, use `cheatrunner/PPSA28997_01.008.001.json` in `/data/cheatrunner/cheats/json/` with a named-module/mastercode reader. Enable **Resource mastercode first**, then the resource options. Disable every resource before disabling the mastercode. Combat/jump do not require it. Live engine validation of this packaging is still required.
+4. Load the game and enable the required options. In the modified PS5Upload helper, a new game process starts with all choices off. Returning to the game's main menu does not restart the process. Disable cheats before restarting the helper: restarting it clears its choices but cannot undo patches already present in a running game.
 
-Offsets are relative to the executable mapping of `Il2CppUserAssemblies.prx`, **not eboot.bin**. Readers ignoring `module_name` are unsupported. Assembly uses the virtual module origin 0x10000 before that executable mapping. Do not port to another update/backport by title/version alone; original instruction bytes must match.
+## Build and verification limits
 
-The 14-switch PS5Upload package passed 8,876 resource emulator cases with execute-only text, null/invalid definitions, balances, all/single/alternating flag masks, and two relocated origins. The real C patch planner passed 336 randomized transitions. Two live 28-transition passes verified every flag, shared hook retention and complete final restoration. The player subsequently reported success after a full game close/relaunch; that confirmation is a player report, not a second machine memory capture.
+Offsets are relative to the executable mapping of `Il2CppUserAssemblies.prx`, not `eboot.bin`. Readers ignoring per-mod `module_name` are unsupported. Assembly uses virtual module origin 0x10000 before that mapping. Do not port by title/version alone; original instruction bytes must match.
 
-The mastercode package emits exactly the same live-tested resource code for all 2,047 nonempty resource selections. The actual current CheatRunner C conflict classifier reports **0 conflict pairs**, versus 55 for the shared 14-switch layout. A native C patch planner additionally passed 600 transitions without shared-range retention. These host checks do **not** constitute a live CheatRunner test. HEN reports [177](https://github.com/TeeKay87/HEN-Cheats-Collection/issues/177) and [180](https://github.com/TeeKay87/HEN-Cheats-Collection/issues/180) concern the older file; their comments recommend CheatRunner 0.18. We have not reproduced their users' failures or established that this update fixes them.
+- 21,924 resource emulator cases cover the complete inspected item catalog, all/single/leave-one-out/alternating flags, invalid storage/category, null definitions, negative/high balances, two relocated origins, execute-only text, stack ABI and callee-saved registers.
+- The real shared-range C patch planner passed 624 transitions for the 26-switch layout.
+- A complete PS5Upload live pass checked 46 resource transitions, every resource flag and shared-hook retention, then verified original bytes restored and all 26 choices off. The player subsequently confirmed all requested new resources appeared and worked. The expanded package has not been tested after a complete game-process relaunch.
+- The 27-entry mastercode layout has 0 conflict pairs in the actual CheatRunner C classifier (the shared layout has 253). It matches the 26-switch resource code for 1,073 sampled/edge selections, and passes 1,080 C-plan transitions without shared-range retention. These are host checks, not a live CheatRunner test or exhaustive enumeration of all 23-bit combinations.
 
-One PS5Upload helper SIGSEGV preceded the two successful passes. Its cause remains unknown; this package must not be represented as fixing that separate helper failure. No full official engine/client quality gate was run for the helper source patch.
+The first expanded live attempt failed shared-hook retention. After all options were disabled, the serving helper was gracefully stopped and the stored modified helper relaunched; the complete pass then succeeded. We did not independently identify the earlier serving binary. An older, separate helper SIGSEGV remains unexplained. This JSON does not claim to fix either unrelated crashes or every third-party report. The helper source patch has not passed the full official engine/client quality gate.
 
-## Source and attribution
+## Source and credits
 
-New resource code: [assembly](source/resources.asm), [offset/flag/item metadata](source/resources-meta.json), [validation](validation/). Combat/jump patch bytes are unchanged from the previously published five-switch set; their assembly is in [the prior source documentation](https://github.com/ToKaMaK0/ps5-sos-trainer/blob/63af5e37443fa3a23ec6f3bfa6b69ec60ba6d554/cheats/README.md#source-attribution-and-license).
+[Resource assembly](source/resources.asm), [offset/flag/item metadata](source/resources-meta.json), [validation reports](validation/). Combat/jump bytes are unchanged from the prior package; see [their source documentation](https://github.com/ToKaMaK0/ps5-sos-trainer/blob/63af5e37443fa3a23ec6f3bfa6b69ec60ba6d554/cheats/README.md#source-attribution-and-license).
 
-AI-assisted console implementation by ToKaMaK0 with Codex and live player testing. Initial game-function research: [OverkillLabs3/SoS-PS5](https://github.com/OverkillLabs3/SoS-PS5). Preserve that attribution. Console cheat sources retain the repository's GPL-2.0-only license; the separately identified PS5Upload patch is GPL-3.0-or-later, matching its upstream project. No saves, account data, console credentials or game binaries are included.
+AI-assisted console implementation by ToKaMaK0 with Codex and live player testing. Initial game-function research: [OverkillLabs3/SoS-PS5](https://github.com/OverkillLabs3/SoS-PS5). Preserve attribution. Cheat sources retain GPL-2.0-only; the separately identified PS5Upload helper patch is GPL-3.0-or-later. No saves, credentials, account data or game binaries are included.
