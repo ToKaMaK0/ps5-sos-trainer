@@ -1,4 +1,4 @@
-.quad entry,flag_0,flag_1,flag_2,flag_3,flag_4,flag_5,flag_6,flag_7,flag_8,flag_9,flag_10
+.quad entry,flag_0,flag_1,flag_2,flag_3,flag_4,flag_5,flag_6,flag_7,flag_8,flag_9,flag_10,flag_11,flag_12,flag_13,flag_14,flag_15,flag_16,flag_17,flag_18,flag_19,flag_20,flag_21,flag_22
 entry:
 test rdi,rdi
 jz getter_original
@@ -145,6 +145,150 @@ jz getter_original
 mov r11d,1000
 jmp material_match
 next_10:
+mov r10,0x34003900330037
+cmp qword ptr [rax+20],r10
+jne next_11
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+flag_11:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_11:
+mov r10,0x36003900330037
+cmp qword ptr [rax+20],r10
+jne next_12
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+flag_12:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_12:
+mov r10,0x38003900330037
+cmp qword ptr [rax+20],r10
+jne next_13
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+flag_13:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_13:
+mov r10,0x36003000340037
+cmp qword ptr [rax+20],r10
+jne next_14
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+flag_14:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_14:
+mov r10,0x38003000340037
+cmp qword ptr [rax+20],r10
+jne next_15
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+flag_15:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_15:
+mov r10,0x30003100340037
+cmp qword ptr [rax+20],r10
+jne next_16
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+flag_16:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_16:
+mov r10,0x30003300340037
+cmp qword ptr [rax+20],r10
+jne next_17
+cmp dword ptr [rsi+0x4c],11
+jne getter_original
+flag_17:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_17:
+mov r10,0x34003400340037
+cmp qword ptr [rax+20],r10
+jne next_18
+cmp dword ptr [rsi+0x4c],11
+jne getter_original
+flag_18:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_18:
+mov r10,0x34003600340037
+cmp qword ptr [rax+20],r10
+jne next_19
+cmp dword ptr [rsi+0x4c],11
+jne getter_original
+flag_19:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_19:
+mov r10,0x36003400340037
+cmp qword ptr [rax+20],r10
+jne next_20
+cmp dword ptr [rsi+0x4c],11
+jne getter_original
+flag_20:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_20:
+mov r10,0x38003200340037
+cmp qword ptr [rax+20],r10
+jne next_21
+cmp dword ptr [rsi+0x4c],11
+jne getter_original
+flag_21:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_21:
+mov r10,0x38003400340037
+cmp qword ptr [rax+20],r10
+jne next_22
+cmp dword ptr [rsi+0x4c],11
+jne getter_original
+flag_22:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_22:
 jmp getter_original
 material_match:
 push rbx

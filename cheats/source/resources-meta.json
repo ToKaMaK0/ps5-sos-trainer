@@ -1,23 +1,35 @@
 {
   "cave": 75113984,
-  "size": 813,
-  "table": 96,
-  "entry": 75114080,
+  "size": 1533,
+  "table": 192,
+  "entry": 75114176,
   "site": 9233072,
   "core": 9232624,
   "original": "554889e5415741565350",
   "flags": [
-    186,
-    238,
-    290,
-    342,
-    394,
-    446,
-    498,
-    550,
-    602,
-    651,
-    696
+    282,
+    334,
+    386,
+    438,
+    490,
+    542,
+    594,
+    646,
+    698,
+    750,
+    802,
+    854,
+    906,
+    958,
+    1010,
+    1062,
+    1114,
+    1166,
+    1218,
+    1270,
+    1322,
+    1371,
+    1416
   ],
   "targets": [
     {
@@ -96,6 +108,90 @@
       "ru": "Сплав из Элизия",
       "limit": 1000,
       "category": 1
+    },
+    {
+      "id": "loot_common_wing",
+      "key": "7394",
+      "ru": "Крыло странствий",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_common_fang",
+      "key": "7396",
+      "ru": "Коготь страха",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_common_shell",
+      "key": "7398",
+      "ru": "Морская раковина",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_rare_feather",
+      "key": "7406",
+      "ru": "Птичьи перья",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_rare_tail",
+      "key": "7408",
+      "ru": "Кончик хвоста",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_rare_fur",
+      "key": "7410",
+      "ru": "Клочок меха",
+      "limit": 1000,
+      "category": 1
+    },
+    {
+      "id": "loot_epic_gorgon",
+      "key": "7430",
+      "ru": "Слеза камня",
+      "limit": 1000,
+      "category": 11
+    },
+    {
+      "id": "loot_mythic_lost_boy",
+      "key": "7444",
+      "ru": "Шерсть льва",
+      "limit": 1000,
+      "category": 11
+    },
+    {
+      "id": "loot_boss_cyclops",
+      "key": "7464",
+      "ru": "Глаз циклопа",
+      "limit": 1000,
+      "category": 11
+    },
+    {
+      "id": "loot_mythic_boar_jr",
+      "key": "7446",
+      "ru": "Золотой клык",
+      "limit": 1000,
+      "category": 11
+    },
+    {
+      "id": "loot_epic_siren",
+      "key": "7428",
+      "ru": "Белокурые волосы",
+      "limit": 1000,
+      "category": 11
+    },
+    {
+      "id": "loot_mythic_ladon",
+      "key": "7448",
+      "ru": "Змеиная шкура",
+      "limit": 1000,
+      "category": 11
     }
   ]
 }
