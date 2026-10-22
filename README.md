@@ -1,11 +1,13 @@
 # PS5 SoS Trainer
 
-## Ready-to-use console JSON
+## Console JSON with individual resource switches
 
-The [Sons of Sparta JSON](cheats/json/PPSA28997_01.008.001.json) includes five switches: health/spirit/magic, damage x6, high jump, currency pickup top-up, and five crafting materials topped up to at least 1,000 on an ordinary quantity check (open inventory or an upgrade menu; no pickup needed). The materials are **Rusty Fragment, Raw Ore, Shiny Metal, Ionian Salt and Cretan Whetstone**. Combat, jump, currencies and direct material refills were confirmed by the player on PS5Upload 7.1.9 / FW 11.60; the final JSON getter was also exercised in the live game and all five wallet quantities were independently verified.
+The current [console package](cheats/README.md) separates all eleven resources and retains health/spirit/magic, damage x6 and high jump. **Corinthian Leather and Strong Plate are included.**
 
-See [installation, exact compatibility, validation and console assembly source](cheats/README.md). CheatRunner runtime and a subsequent full relaunch with the final JSON remain unverified. Use a reader that supports `module_name`; the offsets target the Il2Cpp module, not eboot.bin.
+- [14-switch PS5Upload JSON](cheats/json/PPSA28997_01.008.001.json): live-tested with the locally modified helper; all choices start off for each new game process.
+- [Mastercode package for CheatRunner](cheats/cheatrunner/PPSA28997_01.008.001.json): shared resource code plus individual flags. Host conflict and patch checks passed; live CheatRunner testing remains pending.
 
+Read the [exact reader/build requirements and activation instructions](cheats/README.md) before choosing a file. The packages differ intentionally; the shared 14-switch layout must not be distributed as stock-CheatRunner compatible. HEN inclusion of the previous five-switch package does not mean this update has already been accepted.
 
 Experimental Windows trainer for **God of War Sons of Sparta, PPSA28997 01.008.001**. Tested locally with ps5debug-NG 1.3.2 and PS5 FW 11.60.
 
@@ -46,3 +48,4 @@ Optional native generators and verification scripts use Python with `keystone-en
 Game function references were researched from [OverkillLabs3/SoS-PS5](https://github.com/OverkillLabs3/SoS-PS5), then checked against the running PS5 game. See [credits](CREDITS.txt) and [GPL-2.0 license](LICENSE.txt). Third-party dependencies retain their own terms. No saved games, console credentials or account data are included.
 
 The Windows trainer source is separate from the console JSON linked above. Not affiliated with Sony or the game developers. Provided without warranty.
+
