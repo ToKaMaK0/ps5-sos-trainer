@@ -4,8 +4,8 @@
   "version": "01.019.000",
   "process": "eboot.bin",
   "credits": [
-    "Talixme (original cheats)",
-    "ToKaMaK0 / Codex (PPSA21567 01.019.000 adaptation)"
+    "Talixme (original coins and infinite jumps)",
+    "ToKaMaK0 / Codex (PPSA21567 01.019.000 adaptation; no-damage research and live player testing)"
   ],
   "mods": [
     {
@@ -36,6 +36,19 @@
           "offset": "6134E6A",
           "on": "90909090909090",
           "off": "C6835801000001"
+        }
+      ]
+    },
+    {
+      "name": "Без урона герою (попадания врагов)",
+      "type": "checkbox",
+      "_sonic_enabled": false,
+      "hint": "Проверено игроком: несколько уровней и босс пройдены стабильно. Сдвигание телом сохраняется. Падения и все виды ловушек не проверены.",
+      "memory": [
+        {
+          "offset": "60F2CE7",
+          "on": "E9E802000090",
+          "off": "0F84E7020000"
         }
       ]
     }
