@@ -5,13 +5,14 @@
   "title_id": "PPSA21567",
   "version": "01.019.000",
   "firmware": "11.60",
-  "helper": "stock PS5Upload 7.2.0",
-  "json_sha256": "be44bb7ae32a9d4067785a31e7a337d5a1307cd8d42160b2713ac8d6be71c2d2",
+  "helper": "stock PS5Upload 7.5.2",
+  "json_sha256": "2f88780832af9808f4a1d66d907597a53a4b9073fa796af38770a87d9e9a831c",
   "options": [
     "Coins 9999",
-    "Infinite Jumps"
+    "Infinite Jumps",
+    "No damage from enemy hits"
   ],
-  "original_author": "Talixme",
+  "original_author": "Talixme (coins and infinite jumps)",
   "adaptation": "ToKaMaK0 with Codex assistance",
   "source": "https://github.com/TeeKay87/HEN-Cheats-Collection/blob/dbc5f91e181fade457d29e1f511433532bfe8895/cheats/json/PPSA21564_01.018.000_5408ba0c.json",
   "hook_shift": "0x680",
@@ -44,5 +45,27 @@
   "game_relaunch_tested": false,
   "cheatrunner_live_tested": false,
   "etahen_live_tested": false,
-  "invulnerability_included": false
+  "invulnerability_included": true,
+  "protection": {
+    "offset": "0x60F2CE7",
+    "on": "E9E802000090",
+    "off": "0F84E7020000",
+    "implementation": "Unconditional branch to native false-return epilogue of the hero hit gate",
+    "emulator_cases": 8,
+    "relocated_code": true,
+    "execute_only_code": true,
+    "nonvolatile_registers_stack_canary_preserved": true,
+    "isolated_without_rejected_patch_A": true,
+    "off_restoration_read_back": true,
+    "player_confirmed_enemy_vulnerable": true,
+    "player_report": "Several levels completed and a boss defeated; stable operation.",
+    "player_report_date": "2026-10-25",
+    "physical_body_displacement_blocked": false,
+    "all_hazards_or_falls_tested": false,
+    "game_relaunch_tested": false
+  },
+  "no_overlapping_patch_ranges": true,
+  "rejected_or_diagnostic_patches_included": false,
+  "validation_scope": "Historical coins/jumps checks retained; eight protection emulation cases, isolated live testing, user-reported levels and boss. Consolidated three-option JSON and all four active patch ranges freshly read back; choices preserved and diagnostic file archived.",
+  "combined_package_live_readback": true
 }
