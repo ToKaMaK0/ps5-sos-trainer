@@ -1,13 +1,15 @@
 # PS5 SoS Trainer
 
-## Console JSON with individual resource switches
+## Current console JSON: damage x50 and 26 resources
 
-The current [console package](cheats/README.md) separates all 23 resources and retains health/spirit/magic, damage x6 and high jump. **Includes the 12 new purchase materials confirmed by the player on 2026-10-22.**
+The [current console package](cheats/README.md) has **30 entries**: infinite health/spirit/magic, damage x50, high jump x4, resource preparation and 26 separate resource switches. Death Powder, Pomegranate Seed and Agony Ash are included. The player confirmed the new resources and that x50 damage is sufficient in combat.
 
-- [26-switch PS5Upload JSON](cheats/json/PPSA28997_01.008.001.json): live-tested with the locally modified helper; all choices start off for each new game process.
-- [Mastercode package for CheatRunner](cheats/cheatrunner/PPSA28997_01.008.001.json): shared resource code plus individual flags. Host conflict and patch checks passed; live CheatRunner testing remains pending.
+- [PS5Upload JSON](cheats/json/PPSA28997_01.008.001.json): live-tested with stock PS5Upload 7.5.2 / FW 11.60.
+- [Identical CheatRunner review JSON](cheats/cheatrunner/PPSA28997_01.008.001.json): zero host conflict pairs; live CheatRunner execution remains unverified.
 
-Read the [exact reader/build requirements and activation instructions](cheats/README.md) before choosing a file. The packages differ intentionally; the shared 26-switch layout must not be distributed as stock-CheatRunner compatible. HEN inclusion of the previous five-switch package does not mean this update has already been accepted.
+Enable preparation before resources and disable it last. All file defaults are off, but reader presets are separate. Red orbs in the Pit shop and Agony Ash are different currencies; follow the [activation instructions](cheats/README.md). This update has been offered to the shared libraries; submission does not itself prove acceptance.
+
+## Legacy Windows trainer (unchanged by the console JSON update)
 
 Experimental Windows trainer for **God of War Sons of Sparta, PPSA28997 01.008.001**. Tested locally with ps5debug-NG 1.3.2 and PS5 FW 11.60.
 
