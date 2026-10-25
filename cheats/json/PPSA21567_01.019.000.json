@@ -1,0 +1,44 @@
+{
+  "name": "ASTRO BOT",
+  "id": "PPSA21567",
+  "version": "01.019.000",
+  "process": "eboot.bin",
+  "credits": [
+    "Talixme (original cheats)",
+    "ToKaMaK0 / Codex (PPSA21567 01.019.000 adaptation)"
+  ],
+  "mods": [
+    {
+      "name": "Монеты 9999 (Infinite Coins)",
+      "hint": "Подберите монету или измените баланс. Оригинальная реализация Talixme устанавливает 9999.",
+      "type": "checkbox",
+      "_sonic_enabled": false,
+      "memory": [
+        {
+          "offset": "74BF000",
+          "on": "41BF0F2700004489F8894304E9E9164AFE",
+          "off": "0000000000000000000000000000000000"
+        },
+        {
+          "offset": "59606F4",
+          "on": "E907E9B50190",
+          "off": "4401F8894304"
+        }
+      ]
+    },
+    {
+      "name": "Бесконечные прыжки (Infinite Jumps)",
+      "hint": "Отпускайте и снова нажимайте X в воздухе. Если включили после прыжка, сначала приземлитесь.",
+      "type": "checkbox",
+      "_sonic_enabled": false,
+      "memory": [
+        {
+          "offset": "6134E6A",
+          "on": "90909090909090",
+          "off": "C6835801000001"
+        }
+      ]
+    }
+  ],
+  "_sonic_enabled": false
+}
