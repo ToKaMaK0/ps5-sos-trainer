@@ -1,4 +1,4 @@
-.quad entry,flag_0,flag_1,flag_2,flag_3,flag_4,flag_5,flag_6,flag_7,flag_8,flag_9,flag_10,flag_11,flag_12,flag_13,flag_14,flag_15,flag_16,flag_17,flag_18,flag_19,flag_20,flag_21,flag_22
+.quad entry,flag_0,flag_1,flag_2,flag_3,flag_4,flag_5,flag_6,flag_7,flag_8,flag_9,flag_10,flag_11,flag_12,flag_13,flag_14,flag_15,flag_16,flag_17,flag_18,flag_19,flag_20,flag_21,flag_22,flag_23,flag_24,flag_25
 entry:
 test rdi,rdi
 jz getter_original
@@ -289,6 +289,42 @@ jz getter_original
 mov r11d,1000
 jmp material_match
 next_22:
+mov r10,0x32003100340037
+cmp qword ptr [rax+20],r10
+jne next_23
+cmp dword ptr [rsi+0x4c],1
+jne getter_original
+flag_23:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_23:
+mov r10,0x34003200340037
+cmp qword ptr [rax+20],r10
+jne next_24
+cmp dword ptr [rsi+0x4c],11
+jne getter_original
+flag_24:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,1000
+jmp material_match
+next_24:
+mov r10,0x31003000360039
+cmp qword ptr [rax+20],r10
+jne next_25
+cmp dword ptr [rsi+0x4c],2
+jne getter_original
+flag_25:
+mov r10d,0
+test r10d,r10d
+jz getter_original
+mov r11d,100000
+jmp material_match
+next_25:
 jmp getter_original
 material_match:
 push rbx
