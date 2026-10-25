@@ -1,0 +1,19 @@
+{
+  "Result": "PASS",
+  "HelperVersion": "7.5.2",
+  "DamageMultiplier": 50,
+  "PriorDamageOffVerified": true,
+  "FullDeclaredCodeReadback": true,
+  "OtherChoicesPreserved": true,
+  "EnabledIndices": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    29
+  ],
+  "PlayerConfirmation": true,
+  "Sha256": "d5481fd911417a12102b3279cc685e2fb05b82810579b5e62eeb21153339a17f",
+  "PlayerConfirmationText": "Да, теперь урона хватает, всё работает."
+}

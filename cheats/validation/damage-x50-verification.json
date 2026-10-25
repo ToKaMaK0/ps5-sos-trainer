@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "multiplier": 50,
+  "combat_scenarios": 86,
+  "changed_machine_bytes": [
+    227,
+    228,
+    334,
+    335
+  ],
+  "other_mods_identical": true,
+  "byte_length_unchanged": true,
+  "sha256": "d5481fd911417a12102b3279cc685e2fb05b82810579b5e62eeb21153339a17f"
+}

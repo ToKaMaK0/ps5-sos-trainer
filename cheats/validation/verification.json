@@ -1,8 +1,8 @@
 {
   "result": "PASS",
-  "scenarios": 21924,
+  "scenarios": 26292,
   "checks": [
-    "All catalog items, 23 independent flags; all/single/leave-one-out/alternating selections",
+    "All catalog items, 26 independent flags; all/single/leave-one-out/alternating selections",
     "Null/destroyed/invalid definitions",
     "Off/on and two relocated image origins",
     "Execute-only module pages",
@@ -10,5 +10,8 @@
     "Negative and high balances unchanged",
     "Dictionary core called only for permitted material below the resource minimum",
     "Stack ABI and all callee-saved registers; no text reads or writes"
-  ]
+  ],
+  "json_sha256": "143490da4312f54a4b3c73d4051a2d8f82b26b4c11f462020738ee4064ac30a6",
+  "current_json_sha256": "d5481fd911417a12102b3279cc685e2fb05b82810579b5e62eeb21153339a17f",
+  "resource_patch_data_unchanged_since_emulation": true
 }

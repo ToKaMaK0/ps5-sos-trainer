@@ -1,12 +1,19 @@
 {
   "result": "PASS",
-  "actualCPlanToggles": 624,
-  "writes": 1536,
+  "planner_baseline": "7.1.19; identical to 7.5.2",
+  "mods": 30,
+  "resources": 26,
+  "transitions": 1200,
+  "writes": 2800,
+  "planner_sha256": "b197739a1aaa41a5e2c35f96413f952dc2ee802ed308007028adb5a447a1a748",
+  "sha256": "d5481fd911417a12102b3279cc685e2fb05b82810579b5e62eeb21153339a17f",
+  "all_default_off": true,
   "checks": [
-    "26 switches, randomized activation/deactivation orders",
-    "Every resource flag independent after every operation",
-    "Shared getter entry kept until the last resource is off",
-    "Last deactivation restores all original bytes",
-    "No write outside declared JSON locations"
-  ]
+    "Exact upstream 7.1.19 planner compiled as isolated Windows DLL",
+    "Master enabled first and disabled last",
+    "All 26 resource flags independent, random activation orders",
+    "All original bytes restored",
+    "Health/jump unchanged; damage multiplier x50"
+  ],
+  "current_upstream_source_sha256": "b197739a1aaa41a5e2c35f96413f952dc2ee802ed308007028adb5a447a1a748"
 }

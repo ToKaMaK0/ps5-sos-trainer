@@ -1,9 +1,10 @@
 {
   "result": "PASS",
-  "cheatrunner_conflict_pairs_before": 253,
-  "cheatrunner_conflict_pairs_after": 0,
-  "resource_selections_with_identical_code": 1073,
-  "native_c_plan_transitions": 1080,
-  "native_c_plan_writes": 2560,
-  "runtime_limit": "CheatRunner-specific 27-mod packaging has not been tested live on a PS5. Separate live validation report applies to PS5Upload 26-mod packaging."
+  "mods": 30,
+  "resources": 26,
+  "conflict_pairs": 0,
+  "classifier": "Actual CheatRunner C conflict classifier and JSON/hex parser, isolated host build",
+  "json_sha256": "d5481fd911417a12102b3279cc685e2fb05b82810579b5e62eeb21153339a17f",
+  "live_cheatrunner_tested": false,
+  "layout": "One preparation option owns common code/hook; each resource owns its flag"
 }
