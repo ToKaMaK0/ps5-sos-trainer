@@ -1,0 +1,48 @@
+{
+  "result": "PASS",
+  "date": "2026-10-25",
+  "game": "ASTRO BOT",
+  "title_id": "PPSA21567",
+  "version": "01.019.000",
+  "firmware": "11.60",
+  "helper": "stock PS5Upload 7.2.0",
+  "json_sha256": "be44bb7ae32a9d4067785a31e7a337d5a1307cd8d42160b2713ac8d6be71c2d2",
+  "options": [
+    "Coins 9999",
+    "Infinite Jumps"
+  ],
+  "original_author": "Talixme",
+  "adaptation": "ToKaMaK0 with Codex assistance",
+  "source": "https://github.com/TeeKay87/HEN-Cheats-Collection/blob/dbc5f91e181fade457d29e1f511433532bfe8895/cheats/json/PPSA21564_01.018.000_5408ba0c.json",
+  "hook_shift": "0x680",
+  "sites": [
+    {
+      "name": "coin",
+      "offset": "0x59606f4",
+      "absolute": "0x5d606f4",
+      "matches": 1,
+      "source_shift": "0x680"
+    },
+    {
+      "name": "jump",
+      "offset": "0x6134e6a",
+      "absolute": "0x6534e6a",
+      "matches": 1,
+      "source_shift": "0x680"
+    }
+  ],
+  "emulation_cases": 128,
+  "relocated_code": true,
+  "execute_only_code": true,
+  "full_patch_readback": true,
+  "original_bytes_verified": true,
+  "empty_cave_page_verified": true,
+  "default_off_verified": true,
+  "independent_switches_verified": true,
+  "off_restoration_verified": true,
+  "player_confirmed_both_effects": true,
+  "game_relaunch_tested": false,
+  "cheatrunner_live_tested": false,
+  "etahen_live_tested": false,
+  "invulnerability_included": false
+}
