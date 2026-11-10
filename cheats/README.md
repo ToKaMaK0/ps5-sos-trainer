@@ -1,3 +1,9 @@
+## Ghost of Yotei
+
+[Ghost of Yotei PPSA26344 / 02.002.000 — Russian / English tables, activation and validation](ghost-of-yotei/README.md). 26 independent switches; combat/movement first, currency/materials next, ammunition last; all defaults OFF.
+
+---
+
 # Sons of Sparta: damage x50 and 26 resource switches
 
 Updated 2026-10-25. **PPSA28997 / 01.008.001, exact tested BP 4.xx build, PS5 FW 11.60.**
@@ -75,3 +81,4 @@ Offsets are relative to the executable PRX mapping. Assembly uses virtual origin
 [Resource assembly](source/resources.asm), [resource identity/flag metadata](source/resources-meta.json), [x50 damage assembly](source/damage_filter.asm), [health assembly](source/health_entry.asm), [static module metadata](source/console-meta.json), [verification reports](validation/).
 
 Console implementation: ToKaMaK0 with Codex/AI assistance and live player testing. Initial function research: [OverkillLabs3/SoS-PS5](https://github.com/OverkillLabs3/SoS-PS5). Preserve credits and GPL-2.0-only source licensing. The separately retained old PS5Upload helper patch is GPL-3.0-or-later and is not required by this package. No saves, credentials, account data or game binaries are included.
+
