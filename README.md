@@ -1,5 +1,11 @@
 # PS5 SoS Trainer
 
+## Ghost of Yotei: PPSA26344 / 02.002.000
+
+[Bilingual JSON](cheats/json/PPSA26344_02.002.000.json) · [Instructions and verification](cheats/ghost-of-yotei/README.md)
+
+26 independent switches, all OFF by default. Health, resolve, one hit kill and enhanced high jump are first, currency and materials follow, and all six ammunition switches are last. Custom options were tested in PS5Upload on FW 11.60. Original Yharnam combat codes are retained; live CheatRunner execution remains unverified. See the game-specific instructions for build checks and resource refresh behavior.
+
 ## ASTRO BOT: PPSA21567 / 01.019.000
 
 [Download JSON](cheats/json/PPSA21567_01.019.000.json) · [Verification](cheats/validation/astro-bot-PPSA21567-01.019.000.json)
@@ -62,4 +68,5 @@ Optional native generators and verification scripts use Python with `keystone-en
 Game function references were researched from [OverkillLabs3/SoS-PS5](https://github.com/OverkillLabs3/SoS-PS5), then checked against the running PS5 game. See [credits](CREDITS.txt) and [GPL-2.0 license](LICENSE.txt). Third-party dependencies retain their own terms. No saved games, console credentials or account data are included.
 
 The Windows trainer source is separate from the console JSON linked above. Not affiliated with Sony or the game developers. Provided without warranty.
+
 
