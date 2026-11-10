@@ -5,14 +5,13 @@
   "process": "eboot.bin",
   "credits": [
     "Yharnam (original Infinite Health and One Hit Kill code)",
-    "HEN-Cheats-Collection (source of the original combat codes)",
     "ToKaMaK0 / Codex (independent resources, high jump, infinite resolve, labels and packaging)"
   ],
   "_sonic_enabled": false,
   "mods": [
     {
-      "name": "Бесконечное здоровье (Infinite Health)",
-      "hint": "Готовый код Yharnam для 02.002.000. Проверка в бою ещё не выполнена. / Original Yharnam code for 02.002.000, unchanged. Not independently combat-tested in this package.",
+      "name": "Infinite Health (Бесконечное здоровье)",
+      "hint": "Original Yharnam code for 02.002.000, unchanged. Not independently combat-tested in this package. / Готовый код Yharnam для 02.002.000. Проверка в бою ещё не выполнена.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -29,8 +28,8 @@
       ]
     },
     {
-      "name": "Бесконечная воля (Infinite Resolve)",
-      "hint": "Сохраняет текущий запас жёлтых кружков при расходовании. Если запас пуст, сначала выпейте сакэ. / Prevents spending the current yellow-circle reserve. If empty, drink sake first. Normal replenishment still works.",
+      "name": "Infinite Resolve (Бесконечная воля)",
+      "hint": "Prevents spending the current yellow-circle reserve. If empty, drink sake first. Normal replenishment still works. / Сохраняет текущий запас жёлтых кружков при расходовании. Если запас пуст, сначала выпейте сакэ.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -47,8 +46,8 @@
       ]
     },
     {
-      "name": "Убийство одним ударом (One Hit Kill)",
-      "hint": "Готовый код Yharnam для 02.002.000. Проверка в бою ещё не выполнена. / Original Yharnam code for 02.002.000, unchanged. Not independently combat-tested in this package.",
+      "name": "One Hit Kill (Убийство одним ударом)",
+      "hint": "Original Yharnam code for 02.002.000, unchanged. Not independently combat-tested in this package. / Готовый код Yharnam для 02.002.000. Проверка в бою ещё не выполнена.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -65,8 +64,8 @@
       ]
     },
     {
-      "name": "Высокий прыжок — усиленный (Enhanced High Jump)",
-      "hint": "Усиленные обычные прыжки с места и на бегу. После отключения следующий прыжок снова обычный. / Boosts ordinary standing and running jumps. Disable to restore the next jump. Not an infinite-air-jump cheat; the internal scale is not a measured height multiplier.",
+      "name": "Enhanced High Jump (Высокий прыжок — усиленный)",
+      "hint": "Boosts ordinary standing and running jumps. Disable to restore the next jump. Not an infinite-air-jump cheat; the internal scale is not a measured height multiplier. / Усиленные обычные прыжки с места и на бегу. После отключения следующий прыжок снова обычный.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -88,8 +87,8 @@
       ]
     },
     {
-      "name": "Монеты — минимум 99 999 (Mon (Coins) - Minimum 99,999)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Mon (Coins) - Minimum 99,999 (Монеты — минимум 99 999)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -106,8 +105,8 @@
       ]
     },
     {
-      "name": "Цветы — минимум 1000 (Flowers - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Flowers - Minimum 1,000 (Цветы — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -124,8 +123,8 @@
       ]
     },
     {
-      "name": "Сакэ — минимум 1000 (Sake - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Sake - Minimum 1,000 (Сакэ — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -142,8 +141,8 @@
       ]
     },
     {
-      "name": "Грибы — минимум 1000 (Mushrooms - Minimum 1,000)",
-      "hint": "Грибы: при получении или расходовании — минимум 1000. Рыбу не меняет. / Refills mushrooms on gain or spending; fish has its own independent switch.",
+      "name": "Mushrooms - Minimum 1,000 (Грибы — минимум 1000)",
+      "hint": "Refills mushrooms on gain or spending; fish has its own independent switch. / Грибы: при получении или расходовании — минимум 1000. Рыбу не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -160,8 +159,8 @@
       ]
     },
     {
-      "name": "Рыба — минимум 1000 (Fish - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Refills fish on gain or spending; mushrooms have their own independent switch.",
+      "name": "Fish - Minimum 1,000 (Рыба — минимум 1000)",
+      "hint": "Refills fish on gain or spending; mushrooms have their own independent switch. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -178,8 +177,8 @@
       ]
     },
     {
-      "name": "Растения / ель Эдзо — минимум 1000 (Plants / Ezo Spruce - Minimum 1,000)",
-      "hint": "Растения и ель Эдзо используют один общий запас. При получении или расходовании — минимум 1000. / Plants and Ezo Spruce are two labels for one shared counter. Refilled on gain or spending.",
+      "name": "Plants / Ezo Spruce - Minimum 1,000 (Растения / ель Эдзо — минимум 1000)",
+      "hint": "Plants and Ezo Spruce are two labels for one shared counter. Refilled on gain or spending. / Растения и ель Эдзо используют один общий запас. При получении или расходовании — минимум 1000.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -196,8 +195,8 @@
       ]
     },
     {
-      "name": "Шёлк / ткань из лыка — минимум 1000 (Silk / Bast Cloth - Minimum 1,000)",
-      "hint": "Шёлк и ткань из лыка используют один общий запас. При получении или расходовании — минимум 1000. / Silk and Bast Cloth are two labels for one shared counter. Refilled on gain or spending.",
+      "name": "Silk / Bast Cloth - Minimum 1,000 (Шёлк / ткань из лыка — минимум 1000)",
+      "hint": "Silk and Bast Cloth are two labels for one shared counter. Refilled on gain or spending. / Шёлк и ткань из лыка используют один общий запас. При получении или расходовании — минимум 1000.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -214,8 +213,8 @@
       ]
     },
     {
-      "name": "Молодой бамбук — минимум 1000 (Young Bamboo - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Young Bamboo - Minimum 1,000 (Молодой бамбук — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -232,8 +231,8 @@
       ]
     },
     {
-      "name": "Ценная древесина — минимум 1000 (Precious Wood - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Precious Wood - Minimum 1,000 (Ценная древесина — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -250,8 +249,8 @@
       ]
     },
     {
-      "name": "Металлы — минимум 1000 (Metals - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Metals - Minimum 1,000 (Металлы — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -268,8 +267,8 @@
       ]
     },
     {
-      "name": "Драгоценные металлы — минимум 1000 (Precious Metals - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Precious Metals - Minimum 1,000 (Драгоценные металлы — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -286,8 +285,8 @@
       ]
     },
     {
-      "name": "Припасы гадюк — минимум 1000 (Viper Supplies - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Viper Supplies - Minimum 1,000 (Припасы гадюк — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -304,8 +303,8 @@
       ]
     },
     {
-      "name": "Фрагменты масок слуг демона — минимум 1000 (Demon Servant Mask Fragments - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Demon Servant Mask Fragments - Minimum 1,000 (Фрагменты масок слуг демона — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -327,8 +326,8 @@
       ]
     },
     {
-      "name": "Сталь синоби — минимум 1000 (Shinobi Steel - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Shinobi Steel - Minimum 1,000 (Сталь синоби — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -350,8 +349,8 @@
       ]
     },
     {
-      "name": "Детали ружей — минимум 1000 (Gun Parts - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Gun Parts - Minimum 1,000 (Детали ружей — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -368,8 +367,8 @@
       ]
     },
     {
-      "name": "Чёрный порох — минимум 1000 (Black Powder - Minimum 1,000)",
-      "hint": "При получении или расходовании этого ресурса. Остальные ресурсы не меняет. / Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it.",
+      "name": "Black Powder - Minimum 1,000 (Чёрный порох — минимум 1000)",
+      "hint": "Raises only this resource to the minimum when it is gained or spent. Opening the inventory alone does not refill it. / При получении или расходовании этого ресурса. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -386,8 +385,8 @@
       ]
     },
     {
-      "name": "Стрелы — полный запас (Arrows - Full Capacity)",
-      "hint": "Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет. / Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged.",
+      "name": "Arrows - Full Capacity (Стрелы — полный запас)",
+      "hint": "Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged. / Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -404,8 +403,8 @@
       ]
     },
     {
-      "name": "Тяжёлые стрелы — полный запас (Heavy Arrows - Full Capacity)",
-      "hint": "Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет. / Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged.",
+      "name": "Heavy Arrows - Full Capacity (Тяжёлые стрелы — полный запас)",
+      "hint": "Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged. / Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -422,8 +421,8 @@
       ]
     },
     {
-      "name": "Горящие стрелы — полный запас (Flaming Arrows - Full Capacity)",
-      "hint": "Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет. / Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged.",
+      "name": "Flaming Arrows - Full Capacity (Горящие стрелы — полный запас)",
+      "hint": "Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged. / Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -440,8 +439,8 @@
       ]
     },
     {
-      "name": "Отравленные стрелы — полный запас (Poison Arrows - Full Capacity)",
-      "hint": "Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет. / Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged.",
+      "name": "Poison Arrows - Full Capacity (Отравленные стрелы — полный запас)",
+      "hint": "Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged. / Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -458,8 +457,8 @@
       ]
     },
     {
-      "name": "Обезоруживающие стрелы — полный запас (Disarming Arrows - Full Capacity)",
-      "hint": "Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет. / Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged.",
+      "name": "Disarming Arrows - Full Capacity (Обезоруживающие стрелы — полный запас)",
+      "hint": "Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged. / Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
@@ -476,8 +475,8 @@
       ]
     },
     {
-      "name": "Взрывные стрелы — полный запас (Explosive Arrows - Full Capacity)",
-      "hint": "Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет. / Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged.",
+      "name": "Explosive Arrows - Full Capacity (Взрывные стрелы — полный запас)",
+      "hint": "Refills this arrow type to the player's current capacity when its amount changes. Other ammunition types are unchanged. / Пополнение до текущей вместимости при получении или расходовании стрел. Остальные ресурсы не меняет.",
       "type": "checkbox",
       "_sonic_enabled": false,
       "memory": [
